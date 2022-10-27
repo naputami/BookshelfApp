@@ -1,0 +1,368 @@
+:root{
+    --champagne: #EFE1C9ff;
+    --seal-brown: #401D04ff;
+    --fawn: #DBA96Fff;
+    --bronze: #CF8C47ff;
+    --color1: #C0564B;
+    --color2: #00917D;
+    --color3: #005B4A;
+    --color4: #FFF9EE;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    background-color: var(--champagne);
+    position: relative;
+    min-height: 100vh;
+    font-family: "Poppins", serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container.top {
+    background-color: var(--fawn);
+    max-width: 100rem;
+    max-height: 100rem;
+    padding: 2rem;
+    border-radius: 0 0 100rem 100rem;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container.welcome {
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+}
+.container.welcome img {
+    max-width: 40rem;
+}
+
+.container.welcome h1 {
+    font-weight: bold;
+}
+
+#add-book-btn {
+    padding: 0.5rem;
+    width: 12.5%;
+    height: 20%;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    background-color: var(--seal-brown);
+    border-color: var(--seal-brown);
+}
+
+
+.modal-content {
+    background-color: var(--champagne);
+}
+
+
+.form-group {
+    font-size: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+
+.input-check {
+    margin-top: 1rem;
+    display: flex;
+    font-size: 1rem;
+}
+
+.input-check label {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.input-check input[type="checkbox"] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 0.1rem;
+}
+
+#btn-submit-data {
+    background-color: var(--color2) ;
+    border: var(--color2);
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+#search-bar {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#item-search {
+    padding: 0.8rem;
+    width: 50rem;
+    background-color: var(--champagne);
+    border: none;
+    font-size: 1.3rem;
+    background-image: url(assets/search.svg);
+    background-repeat: no-repeat;
+    background-position: top 0.7rem right 1rem;
+    background-size: 2rem;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#delete-all-btn {
+    background-color: var(--color1);
+    color: var(--color4);
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    width: 20rem;
+    padding: 0.5rem;
+    border: none;
+}
+
+.fa-trash {
+    margin-left: 1rem;
+}
+
+.container.bottom {
+    margin-top: 2rem;
+}
+
+.list-container {
+    width: 50%;
+    margin: 2rem;
+}
+
+.list-name {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.list-name.not-finished {
+    background-color: var(--seal-brown);
+    color: var(--color4)
+}
+
+.list-name.finished {
+    background-color: var(--fawn);
+    color: var(--seal-brown)
+}
+.textContainer {
+    width: 90%;
+    margin: 2rem auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 1rem;
+    background-color: var(--color4);
+    display: flex;
+    align-items: center;
+}
+
+.inner {
+    width: 90%;
+    padding: 0.5rem;
+}
+
+.inner p {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-data {
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-size: contain;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.btn-data:hover {
+    background-size: contain;
+}
+
+.done {
+    background: url(assets/check-circle.svg) no-repeat;
+    background-size: contain;
+}
+
+.done:hover{
+    background: url(assets/check-circle-fill.svg) no-repeat;
+    background-size: contain;
+}
+
+.delete {
+    background: url(assets/trash3.svg) no-repeat ;
+    background-size: contain;
+}
+
+.delete:hover{
+    background: url(assets/trash3-fill.svg) no-repeat;
+    background-size: contain;
+}
+
+.undo {
+    background: url(assets/book.svg) no-repeat ;
+    background-size: contain;
+}
+
+.undo:hover{
+    background: url(assets/book-half.svg) no-repeat;
+    background-size: contain;
+}
+
+footer {
+    width: 100%;
+    font-size: 1.1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    height: 2.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--seal-brown);
+}
+
+footer a:hover , footer a:active{
+    text-decoration: underline;
+    color: inherit ;
+}
+
+
+@media (max-width: 900px){
+    .container.welcome img {
+        max-width: 35rem;
+    }
+
+    .container.welcome h1 {
+        font-size: 2rem;
+    }
+
+    #add-book-btn {
+        font-size: 1.2rem;
+    }
+
+    #item-search {
+        font-size: 1.1rem;
+        width: 40rem;
+        padding: 0.6rem;
+        background-position: top 0.5rem right 1rem;
+        background-size: 1.7rem;
+    }
+
+    .list-name {
+        font-size: 1.5rem;
+    }
+
+    .btn-data {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    .inner p {
+        font-size: 1.1rem;
+    }
+
+    .inner h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px){
+    .container.top {
+        border-radius: 0;
+        width: 100%;
+    }
+    .container.welcome h1 {
+        font-size: 1.5rem;
+    }
+
+    .container.welcome img {
+        width: 28rem;
+    }
+
+    .input-check label {
+        font-size: 1.3rem;
+    }
+
+    #add-book-btn {
+        font-size: 1rem;
+        width: 25%;
+        margin-top: 0.5rem;
+    }
+
+    #search-bar {
+        margin-top: 0.8rem;
+    }
+
+    #item-search {
+        width: 27rem;
+        background-position: top 0.6rem right 1rem;
+        background-size: 1.5rem;
+    }
+
+    .container.bottom {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .list-container {
+        width: 95%;
+        margin: 2rem;
+
+    }
+
+    .list-name {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .btn-data {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .inner p {
+        font-size: 0.9rem;
+    }
+
+    .inner h2 {
+        font-size: 1.4rem;
+    }
+
+    #delete-all-btn {
+        padding: 0.5rem;
+        width: 16rem;
+        font-size: 1.1rem;
+        margin-top: 2rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
